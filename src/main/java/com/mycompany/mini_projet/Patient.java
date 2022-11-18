@@ -13,8 +13,8 @@ import java.util.Date;
 public class Patient extends Abonné {
     private int numeroSS;
 
-    public Patient(int numeroSS, String nom, String prenom, String adresse, int numTel, String login, String password) {
-        super(nom, prenom, adresse, numTel, login, password);
+    public Patient(int numeroSS) {
+        super();
         this.numeroSS = numeroSS;
     }
 
@@ -25,14 +25,15 @@ public class Patient extends Abonné {
     public void setNumeroSS(int numeroSS) {
         this.numeroSS = numeroSS;
     }
-
-    public Date getDateAbon() {
-        return dateAbon;
+    
+    @Override
+    public void affiche() {
+        super.affiche();
+        System.out.println(numeroSS);
+        
     }
-
-    public void setDateAbon(Date dateAbon) {
-        this.dateAbon = dateAbon;
-    }
+    
+    
 
     
     

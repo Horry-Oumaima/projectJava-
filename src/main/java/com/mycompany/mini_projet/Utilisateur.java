@@ -21,27 +21,55 @@ public class Utilisateur {
     private String login;
     private String password;
 
-    public Utilisateur(String nom, String prenom, String adresse, int numTel, String login, String password) {
-        this.nom = nom;
-        this.prenom = prenom;
-        this.adresse = adresse;
+    public Utilisateur() {
+        //this.nom = nom;
+         System.out.println("Quel est votre nom ");
+	    Scanner sc = new Scanner (System.in);
+		String str1 = sc.nextLine();
+		 nom=str1;
+        //this.prenom = prenom;
+         System.out.println("Quel est votre prenom?");
+		String str2 = sc.nextLine();
+		 prenom=str2;
+        //this.adresse = adresse;
+         System.out.println("Quel est votre adresse");
+		String str3 = sc.nextLine();
+		 adresse=str3;
         //this.dateNaiss = dateNaiss;
-        this.numTel = numTel;
-        this.login = login;
-        this.password = password;
+        //this.numTel = numTel;
+        System.out.println("Quel est votre tel");
+		int t = sc.nextInt();
+		 numTel=t;
+        
+                 
+        //this.login = login;
+        System.out.println("Quel est votre login");
+		String str4 = sc.next();
+		 login=str4;
+                 
+        //this.password = password;
+        System.out.println("Quel est votre password");
+		String str5 = sc.next();
+		 password=str5;
     }
+    
+    
+    
+    public  void  authentifier() {
+        
+        Scanner input =new Scanner(System.in);
+        String ch1,ch2;
+        System.out.println("saisir votre login");
+        ch1= input.next();
+        System.out.println("donner votre mot de passe");
+        ch2= input.next();
+    };
 
     @Override
     public String toString() {
         return  "nom=" + nom + ", prenom=" + prenom + ", adresse=" + adresse + ", numTel=" + numTel + ", login=" + login + ", password=" + password ;
     }
-    
-    /*public Utilisateur(String password) throws PasswordException {
-        if (length(password)<8 )
-            throw new PasswordException;
-    }*/
-    
-    
+   
 
     public String getNom() {
         return nom;
@@ -66,19 +94,7 @@ public class Utilisateur {
     public String getPassword() {
         return password;}
   
-    public void saisieuserpwd(){
-    try{   
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Saisissez un mdp : ");
-        String mdp = sc.nextLine();      
-        System.out.println (mdp);
-     }
-        catch (Erreurpwd e){
-         System.out.println(e.getMessage());    }
-    
-    
     }
-}
      
      
 

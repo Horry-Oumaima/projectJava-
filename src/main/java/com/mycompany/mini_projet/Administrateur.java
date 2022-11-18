@@ -11,8 +11,8 @@ import com.mycompany.mini_projet.Utilisateur;
 public class Administrateur extends Utilisateur {
     private int idAdmin;
 
-    public Administrateur(int idAdmin, String nom, String prenom, String adresse, int numTel, String login, String password) {
-        super(nom, prenom, adresse, numTel, login, password);
+    public Administrateur(int idAdmin) {
+        super();
         this.idAdmin = idAdmin;
     }
 

@@ -50,8 +50,10 @@ public class Maladie {
 
     @Override
     public String toString() {
-        return "Maladie{" + "nomMaladie=" + nomMaladie + ", symptomes=" + symptomes + ", gravit\u00e9=" + gravité + '}';
+        return "Maladie{" + "nomMaladie=" + nomMaladie + ", symptomes=" + symptomes + ", gravite=" + gravité + '}';
     }
+    
+    
     
     
     

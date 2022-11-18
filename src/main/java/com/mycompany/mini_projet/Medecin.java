@@ -4,6 +4,8 @@
  */
 package com.mycompany.mini_projet;
 
+import java.util.Scanner;
+
 /**
  *
  * @author MSI
@@ -11,9 +13,13 @@ package com.mycompany.mini_projet;
 public class Medecin extends Utilisateur {
     private String specialite;
 
-    public Medecin(String specialite, String nom, String prenom, String adresse, int numTel, String login, String password) {
-        super(nom, prenom, adresse, numTel, login, password);
-        this.specialite = specialite;
+    public Medecin(String specialite) {
+        super();
+        //this.specialite = specialite;
+        Scanner sc = new Scanner (System.in);
+        System.out.println("Quel est votre login");
+		String str = sc.next();
+		 specialite=str;
     }
 
     public String getSpecialite() {
